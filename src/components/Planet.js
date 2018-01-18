@@ -23,7 +23,7 @@ export default class Planet extends Component {
               {this.props.terrain}
             </section>
             <section>
-              Featured in {this.props.films} films
+              Featured in {this.props.films} film(s)
             </section>
           </article>
         </div>

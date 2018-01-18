@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Planet from './Planet.js';
+import Button from './Button.js';
 
 export default class App extends Component {
 
@@ -34,28 +35,23 @@ export default class App extends Component {
   }
 
   render() {
-
-    let buttonText = "Next";
-    if (this.state.loading) {
-      buttonText = "Loading...";
-    }
-
     return (
       <div className="app">
         <div className="flex-container">
           <div className="box">
-          <Planet
-            name={this.state.planet.name}
-            climate={this.state.planet.climate}
-            terrain={this.state.planet.terrain}
-            population={this.state.planet.population}
-            films={this.state.planet.films}
+            <Planet
+              name={this.state.planet.name}
+              climate={this.state.planet.climate}
+              terrain={this.state.planet.terrain}
+              population={this.state.planet.population}
+              films={this.state.planet.films}
+              loading={this.state.loading}
+            />
+          </div>
+          <Button
+            onButtonClick={this._getPlanet.bind(this)}
             loading={this.state.loading}
           />
-          </div>
-          <button onClick={this._getPlanet.bind(this)} className="button">
-            {buttonText}
-          </button>
         </div>
       </div>
     );
