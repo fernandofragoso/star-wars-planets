@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  margin: 0 10px;
 }
 
 .box {
@@ -13,8 +13,13 @@
   background-color: #CCC;
   width: 500px;
   padding: 40px;
-  max-height: 1000px;
   height: auto;
   transition: all 1s ease-in-out, left 1.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: auto;
+  }
 }
 

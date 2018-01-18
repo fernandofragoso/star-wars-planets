@@ -11,16 +11,13 @@ export default class Planet extends Component {
           </header>
           <article>
             <section>
-              <strong>Population: </strong>
-              {this.props.population}
+              <strong>Population: </strong>{this.props.population}
             </section>
             <section>
-              <strong>Climate: </strong>
-              {this.props.climate}
+              <strong>Climate: </strong>{this.props.climate}
             </section>
             <section>
-              <strong>Terrain: </strong>
-              {this.props.terrain}
+              <strong>Terrain: </strong>{this.props.terrain}
             </section>
             <section>
               Featured in {this.props.films} film(s)
