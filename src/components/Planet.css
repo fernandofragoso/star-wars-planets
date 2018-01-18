@@ -1,0 +1,12 @@
+
+.planet header{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.planet article{
+  padding: 30px 0;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+}
