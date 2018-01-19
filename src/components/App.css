@@ -8,9 +8,10 @@
 }
 
 .box {
-  border-radius: 20px;
+  border-radius: 10px;
   border: 0;
-  background-color: #CCC;
+  background-color: #555;
+  color: #aaa;
   width: 550px;
   height: auto;
   padding: 40px;

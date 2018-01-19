@@ -2,6 +2,7 @@
 .planet {
   transition: opacity 0.5s;
   position: relative;
+  text-shadow: 2px 2px 2px #333;
 }
 
 .planet header{
@@ -18,4 +19,11 @@
 
 .planet--loading {
   opacity: 0;
+}
+
+.planet--loading:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
