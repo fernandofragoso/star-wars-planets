@@ -3,14 +3,11 @@ import './Button.css';
 
 export default class Button extends Component {
   render() {
-    let buttonText = "Next";
-    if (this.props.loading) {
-      buttonText = "Loading...";
-    }
+    let btClasses = (this.props.loading ? "button--disabled" : "button");
 
     return (
-      <button onClick={this.props.onButtonClick.bind(this)} className="button">
-        {buttonText}
+      <button onClick={this.props.onButtonClick.bind(this)} className={btClasses}>
+        NEXT
       </button>
     );
   }

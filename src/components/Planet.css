@@ -1,4 +1,9 @@
 
+.planet {
+  transition: opacity 0.5s;
+  position: relative;
+}
+
 .planet header{
   text-align: center;
   text-transform: uppercase;
@@ -9,4 +14,8 @@
   font-size: 20px;
   line-height: 30px;
   text-align: left;
+}
+
+.planet--loading {
+  opacity: 0;
 }
