@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Planet from './Planet.js';
-import Button from './Button.js';
+import ButtonNext from './ButtonNext.js';
 
 export default class App extends Component {
 
@@ -9,6 +9,7 @@ export default class App extends Component {
     super();
     this.state = {
       loading: true,
+      error: false,
       count: 0,
       planet: {
         name: "Tatooine",
@@ -31,7 +32,9 @@ export default class App extends Component {
       });
       this._getPlanet();
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      this._setError(error);
+    });
   }
 
   render() {
@@ -46,9 +49,10 @@ export default class App extends Component {
               population={this.state.planet.population}
               films={this.state.planet.films}
               loading={this.state.loading}
+              error={this.state.error}
             />
           </div>
-          <Button
+          <ButtonNext
             onButtonClick={this._getPlanet.bind(this)}
             loading={this.state.loading}
           />
@@ -58,12 +62,12 @@ export default class App extends Component {
   }
 
   _getPlanet() {
-    //Set loading
+    // Set loading state
     this.setState({
       loading: true
     });
     //Get a random Planet
-    let id = Math.floor(Math.random() * this.state.count) + 1;
+    let id = Math.floor(Math.random() * 60) + 1;
     fetch(`https://swapi.co/api/planets/${id}/`, {
       method: 'GET'
     }).then(res => res.json())
@@ -80,6 +84,16 @@ export default class App extends Component {
         }
       })
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      this._setError();
+    });
+  }
+
+  _setError(error) {
+    console.log('_setError' + error);
+    this.setState({
+      loading: false,
+      error: true
+    })
   }
 }

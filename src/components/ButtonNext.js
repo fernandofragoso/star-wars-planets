@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Button.css';
+import './ButtonNext.css';
 
-export default class Button extends Component {
+export default class ButtonNext extends Component {
   render() {
     let btClasses = (this.props.loading ? "button--disabled" : "button");
 

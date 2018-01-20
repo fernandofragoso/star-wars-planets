@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="planet planet--loading"
+>
+  <header>
+    <h1>
+      name
+    </h1>
+  </header>
+  <article>
+    <div>
+      <strong>
+        Population: 
+      </strong>
+      10.000
+    </div>
+    <div>
+      <strong>
+        Climate: 
+      </strong>
+      climate
+    </div>
+    <div>
+      <strong>
+        Terrain: 
+      </strong>
+      terrain
+    </div>
+    <div
+      className="center"
+    >
+      Featured in 1 film
+    </div>
+  </article>
+</div>
+`;
+
+exports[`renders correctly with multiple films 1`] = `
+<div
+  className="planet planet--loading"
+>
+  <header>
+    <h1>
+      name
+    </h1>
+  </header>
+  <article>
+    <div>
+      <strong>
+        Population: 
+      </strong>
+      9.000.000.000
+    </div>
+    <div>
+      <strong>
+        Climate: 
+      </strong>
+      climate
+    </div>
+    <div>
+      <strong>
+        Terrain: 
+      </strong>
+      terrain
+    </div>
+    <div
+      className="center"
+    >
+      Featured in 10 films
+    </div>
+  </article>
+</div>
+`;
+
+exports[`renders correctly without population and films 1`] = `
+<div
+  className="planet planet--loading"
+>
+  <header>
+    <h1>
+      name
+    </h1>
+  </header>
+  <article>
+    <div>
+      <strong>
+        Population: 
+      </strong>
+      unknown
+    </div>
+    <div>
+      <strong>
+        Climate: 
+      </strong>
+      climate
+    </div>
+    <div>
+      <strong>
+        Terrain: 
+      </strong>
+      terrain
+    </div>
+    <div
+      className="center"
+    >
+      Never featured in a film
+    </div>
+  </article>
+</div>
+`;

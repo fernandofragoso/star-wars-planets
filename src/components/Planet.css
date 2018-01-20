@@ -17,6 +17,11 @@
   text-align: left;
 }
 
+.planet article .center{
+  margin-top: 10px;
+  text-align: center;
+}
+
 .planet--loading {
   opacity: 0;
 }
