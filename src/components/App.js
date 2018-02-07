@@ -67,7 +67,7 @@ export default class App extends Component {
       loading: true
     });
     //Get a random Planet
-    let id = Math.floor(Math.random() * 60) + 1;
+    let id = Math.floor(Math.random() * this.state.count) + 1;
     fetch(`https://swapi.co/api/planets/${id}/`, {
       method: 'GET'
     }).then(res => res.json())
